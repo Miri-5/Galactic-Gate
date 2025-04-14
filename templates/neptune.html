@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <a href="{{ url_for('home') }}" class="home-button" title="Ana Səhifəyə Qayıt">🏠</a>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Neptune (Big Blue)</title>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: 'Segoe UI', sans-serif;
+          background: linear-gradient(to bottom, #0d0d1a, #1a1a2e); /* kosmik tünd bənövşəyi ton */
+          color: white;
+          min-height: 100vh;
+          line-height: 1.6;
+          text-align: center;
+        }
+        
+        h1, h2 {
+          color: #ffffff;
+          text-shadow: 1px 1px 4px #000;
+          margin-top: 20px;
+        }
+        
+        input[type="text"] {
+          padding: 10px;
+          width: 250px;
+          font-size: 16px;
+          border: none;
+          border-radius: 6px;
+          outline: none;
+        }
+        
+        button {
+          padding: 10px 15px;
+          font-size: 16px;
+          margin-left: 10px;
+          background-color: #3366ff;
+          color: white;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: background 0.3s ease;
+        }
+        
+        button:hover {
+          background-color: #254eda;
+        }
+        
+        .info-section {
+          padding: 20px;
+          max-width: 900px;
+          margin: 0 auto;
+        }
+        
+        .image-section {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 30px;
+          margin: 40px 0;
+        }
+        
+        .image-section img {
+          width: 100%;
+          max-width: 400px;
+          height: auto;
+          border-radius: 10px;
+          box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+          transition: transform 0.3s ease;
+        }
+        
+        .image-section img:hover {
+          transform: scale(1.05);
+        }
+        .home-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  background-color: #222;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  transition: background-color 0.3s ease, transform 0.2s;
+  z-index: 1000;
+}
+
+.home-button:hover {
+  background-color: #444;
+  transform: scale(1.1);
+}
+button[name="action"][value="kaydet"] {
+  border-color: yellow;
+  color: yellow;
+}
+
+button:hover {
+  background-color: #21262d;
+}        
+            </style>
+</head>
+<body>
+
+    <h1>Neptune: Qırmızı Planeti Kəşf Et</h1>
+
+    <div class="search">
+        <form action="/planet_search" method="get">
+            <input type="text" name="query" placeholder="Planet adı ilə axtar" />
+            <button type="submit">Axtar</button>
+            <a href="/record" class="button">Kayıt</a>
+        </form>
+    </div>
+
+    <div class="content">
+        <h2> Neptune Haqqında Məlumat </h2>
+        <p>Neptune is about 4.495 billion kilometers from the sun making it the farthest planet from the sun. This is about 30 astronomical units (AU) away from Earth.
+
+            Neptune has a tilted axis at about 29 degrees. Because of its tilt, it has seasons like Earth. Further to this, planet Neptune has the strongest winds of all other planets.
+            
+            Surface Temperature: -231°C
+            Distance to Sun: 4,498,000,000 km
+            Moons: 14
+            Radius: 1,737 km
+            Neptune resembles Uranus with a similar size, composition, and temperature.
+            
+            Interestingly, Pluto is part of Neptune’s orbit. Not so long ago, Pluto was considered a planet on its own. But now Pluto has been demoted to a dwarf planet because we’ve learned more about planet Neptune’s orbit.</p>
+        
+        <h3>Şəkil</h3>
+        <img src="../static/img/Neptune.jpg" alt="Neptune">
+        <img src="../static/img/Neptune-1-1536x1536.jpg" alt="Neptune">
+        <h3>Video</h3>
+        <video controls>
+            <source src="Neptune_video.mp4" type="video/mp4">
+            Sizin brauzeriniz video elementini dəstəkləmir.
+        </video>
+    </div>
+
+</body>
+</html>

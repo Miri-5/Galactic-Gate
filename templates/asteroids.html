@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <a href="{{ url_for('home') }}" class="home-button" title="Ana Səhifəyə Qayıt">🏠</a>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asteroids (Rocky Remnants)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #111;
+            color: white;
+            text-align: center;
+        }
+        .content {
+            margin: 20px;
+        }
+        img {
+            width: 80%;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+        video {
+            width: 80%;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+        .search {
+            margin: 20px 0;
+        }
+        input[type="text"] {
+            padding: 10px;
+            font-size: 16px;
+            width: 300px;
+        }
+        button {
+            padding: 10px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        .home-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 28px;
+            background-color: #222;
+            color: white;
+            padding: 10px 14px;
+            border-radius: 50%;
+            text-decoration: none;
+            box-shadow: 0 0 10px rgba(255,255,255,0.1);
+            transition: background-color 0.3s ease, transform 0.2s;
+            z-index: 1000;
+            }
+
+            .home-button:hover {
+            background-color: #444;
+            transform: scale(1.1);
+            }
+    </style>
+</head>
+<body>
+
+    <h1>Asteroids: Qırmızı Planeti Kəşf Et</h1>
+
+    <div class="search">
+        <form action="/planet_search" method="get">
+            <input type="text" name="query" placeholder="Planet adı ilə axtar" />
+            <button type="submit">Axtar</button>
+            <a href="/record" class="button">Kayıt</a>
+        </form>
+    </div>
+
+    <div class="content">
+        <h2> Asteroids Haqqında Məlumat </h2>
+        <p>The asteroid belt didn’t mold into a planet. This is because when you have two large bodies like Jupiter and the sun in the solar system, you have two large opposing forces of gravity pulling on each other.
+
+            Think of the asteroid belt as being smack dab in the middle of a gravity tug-of-war. Neither side is winning so asteroids are stuck in between.
+            
+            Location: Asteroid Belt
+            Distance to Sun: 400,000,000 km
+            Composition: Rock, Metal, and Ice
+            The asteroid belt is kilometers in size. If you were to take all the asteroids and put them together, they would make up just 4% of the mass of the moon.
+            
+            This means that there’s really not a lot of material in the asteroid belt orbiting the sun. The largest asteroid is Ceres which is considered a dwarf planet because of its size.</p>
+        
+        <h3>Şəkil</h3>
+        <img src="../static/img/Asteroids.jpg" alt="Asteroids">
+        “Asteroids are odd-shaped rocks made of metal and other elements. There are at least 100,000 known asteroids and we’ve named thousands of them. Most of them are in the asteroid belt stuck between Mars and Jupiter.”
+        <img src="../static/img/Asteroids-Feature-678x378.png" alt="Asteroids">
+        <h3>Video</h3>
+        <video controls>
+            <source src="../static/img/16cc53f8bd1dc2041d20247b29a0281d.mp4" type="video/mp4">
+            Sizin brauzeriniz video elementini dəstəkləmir.
+        </video>
+    </div>
+
+</body>
+</html>

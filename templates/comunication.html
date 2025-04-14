@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <a href="{{ url_for('home') }}" class="home-button" title="Ana Səhifəyə Qayıt">🏠</a>  
+  <meta charset="UTF-8">
+  <title>Fikir ve Öneriler</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+body {
+  background-color: #0d1117;
+  font-family: Arial, sans-serif;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background-color: #161b22;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 0 10px #222;
+  width: 400px;
+  text-align: center;
+}
+
+.lightbulb {
+  width: 100px;
+  margin-bottom: 20px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: #0d1117;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  color: white;
+}
+
+.buttons {
+  margin-top: 15px;
+}
+
+button {
+  padding: 10px 25px;
+  margin: 5px;
+  border: 1px solid #00bfff;
+  background-color: transparent;
+  color: #00bfff;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button[name="action"][value="kaydet"] {
+  border-color: yellow;
+  color: yellow;
+}
+
+button:hover {
+  background-color: #21262d;
+}
+
+    .home-button {
+      position: absolute;
+      top: 20px;
+      left: 20px;
+      font-size: 28px;
+      background-color: #222;
+      color: white;
+      padding: 10px 14px;
+      border-radius: 50%;
+      text-decoration: none;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+      transition: background-color 0.3s ease, transform 0.2s;
+      z-index: 1000;
+    }
+
+    .home-button:hover {
+      background-color: #444;
+      transform: scale(1.1);
+    }
+    
+        </style>
+</head>
+<body>
+  <div class="container">
+    <img src="../static/img/Solar-System-Infographic.png" width="500" height="200"class="lightbulb" alt="Fikir">
+    
+    <form action="/kayit" method="POST">
+      <input type="text" name="baslik" placeholder="Kayıt başlığını yazın" required>
+      <input type="text" name="alt_baslik" placeholder="Alt başlığını yazın">
+      <textarea name="metin" rows="6" placeholder="Elave etmek istediklerinizi buraya yazınız..." required>{{ses}}</textarea>
+      
+      <div class="buttons">
+        <a href="/record" >Kayıt</a>
+        <button type="submit" name="action" value="kaydet">Kayıt</button>
+        <button type="submit" name="action" value="olustur">Oluştur</button>
+      </div>
+    </form>
+  </div>
+</body>
+</html>

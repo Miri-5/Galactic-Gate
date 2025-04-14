@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <a href="{{ url_for('home') }}" class="home-button" title="Ana Səhifəyə Qayıt">🏠</a>  
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jupiter (Gas Giant)</title>
+    <style>
+        body {
+          margin: 0;
+          padding: 0;
+          font-family: 'Segoe UI', sans-serif;
+          background: linear-gradient(to bottom, #0d0d1a, #1a1a2e); /* kosmik tünd bənövşəyi ton */
+          color: white;
+          min-height: 100vh;
+          line-height: 1.6;
+          text-align: center;
+        }
+        
+        h1, h2 {
+          color: #ffffff;
+          text-shadow: 1px 1px 4px #000;
+          margin-top: 20px;
+        }
+        
+        input[type="text"] {
+          padding: 10px;
+          width: 250px;
+          font-size: 16px;
+          border: none;
+          border-radius: 6px;
+          outline: none;
+        }
+        
+        button {
+          padding: 10px 15px;
+          font-size: 16px;
+          margin-left: 10px;
+          background-color: #3366ff;
+          color: white;
+          border: none;
+          border-radius: 6px;
+          cursor: pointer;
+          transition: background 0.3s ease;
+        }
+        
+        button:hover {
+          background-color: #254eda;
+        }
+        
+        .info-section {
+          padding: 20px;
+          max-width: 900px;
+          margin: 0 auto;
+        }
+        
+        .image-section {
+          display: flex;
+          justify-content: center;
+          flex-wrap: wrap;
+          gap: 30px;
+          margin: 40px 0;
+        }
+        
+        .image-section img {
+          width: 100%;
+          max-width: 400px;
+          height: auto;
+          border-radius: 10px;
+          box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+          transition: transform 0.3s ease;
+        }
+        
+        .image-section img:hover {
+          transform: scale(1.05);
+        }
+        .home-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  background-color: #222;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  transition: background-color 0.3s ease, transform 0.2s;
+  z-index: 1000;
+}
+
+.home-button:hover {
+  background-color: #444;
+  transform: scale(1.1);
+}
+button[name="action"][value="kaydet"] {
+  border-color: yellow;
+  color: yellow;
+}
+
+button:hover {
+  background-color: #21262d;
+}       
+            </style>
+</head>
+<body>
+
+    <h1>Jupiter: Planeti Kəşf Et</h1>
+
+    <div class="search">
+        <form action="/planet_search" method="get">
+            <input type="text" name="query" placeholder="Planet adı ilə axtar" />
+            <button type="submit">Axtar</button>
+        </form>
+    </div>
+
+    <div class="content">
+        <h2> Jupiter Haqqında Məlumat </h2>
+        <p>Jupiter is colossal in size. It’s so big that if you combined all the other planets, moons, and asteroids in our solar system in a ball, it still wouldn’t be half the size of Jupiter.
+
+            At about 1000 times larger in volume compared to Earth, planet Jupiter is the largest planet in our solar system. In fact, if Jupiter was 50 times larger than it is now, it would be a star on its own.
+            
+            Surface Temperature: -145°C
+            Distance to Sun: 778,500,000 km
+            Moons: 79
+            Radius: 69,911 km
+            Because of its tremendous size, it’s contending with the sun in a so-called gravity tug-of-war. It puts Mercury, Venus, Mars, Earth and an asteroid belt smack dab in the middle.
+            
+            Interestingly, Jupiter has a permanent cyclone that’s been there ever since we’ve observed it. It also has the biggest Aurora Borealis and 79 moons.
+            
+            Four of Jupiter’s large moons are particularly exciting because of their interesting geology. These moons are Ganymede, Callisto, Io, and Europa.</p>
+        
+        <h3>Şəkil</h3>
+        <img src="../static/img/Jupiter.jpg" alt="Jupiter">
+        <img src="../static/img/Jupiter-1536x1536.jpg" alt="Jupiter">
+        <h3>Video</h3>
+        <video controls>
+            <source src="Jupiter_video.mp4" type="video/mp4">
+            Sizin brauzeriniz video elementini dəstəkləmir.
+        </video>
+    </div>
+
+</body>
+</html>

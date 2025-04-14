@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <div class="logo-container">
+    <img src="../static/img/Galaxy_Gate.png" alt="Galaxy Gate Logo" class="site-logo">
+    <div>
+      <h1 class="site-title">🌌Galaxy Gate🔭</h1>
+      <p class="site-slogan">"Unlock the Secrets of the Universe"</p>
+      
+    </div>
+  </div>  
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🌌Galaxy Gate🔭</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<style>
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff;
+    margin: 20px;
+    color: #333;
+}
+body {
+  background-color: #000431;
+  color: #f0f0f0;
+  font-family: 'Segoe UI', sans-serif;
+  text-align: center;
+  padding: 20px;
+}
+
+h2 {
+    color: #4b0082;
+    font-size: 24px;
+}
+
+.planet-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.planet-card {
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding: 15px;
+    transition: transform 0.3s;
+}
+
+.planet-card:hover {
+    transform: scale(1.05);
+}
+
+.planet-card img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+a {
+    color: #4b0082;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+input[type="text"] {
+  padding: 10px;
+  width: 250px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  outline: none;
+}
+
+button {
+  padding: 10px 15px;
+  font-size: 16px;
+  margin-left: 10px;
+  background-color: #3366ff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button:hover {
+  background-color: #254eda;
+}
+
+.info-section {
+  padding: 20px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.image-section {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin: 40px 0;
+}
+.home-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 28px;
+  background-color: #222;
+  color: white;
+  padding: 10px 14px;
+  border-radius: 50%;
+  text-decoration: none;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+  transition: background-color 0.3s ease, transform 0.2s;
+  z-index: 1000;
+}
+
+.home-button:hover {
+  background-color: #444;
+  transform: scale(1.1);
+}
+
+.image-list {
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px; /* şəkillər arası məsafə */
+  margin-top: 20px;
+}
+
+.image-list li img {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+  transition: transform 0.3s ease;
+}
+
+.image-list li img:hover {
+  transform: scale(1.05); /* hover effekti */
+}
+
+.site-slogan {
+  font-size: 16px;
+  color: #aaa;
+  margin: 0;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    background: linear-gradient(to bottom right, #0d0d2b, #1e1e60);
+    color: white;
+    
+}
+h1.site-title {
+    font-size: 48px;
+    color: #FFD700;
+    text-align: center;
+    margin-top: 30px;
+    text-shadow: 2px 2px 10px #000;
+}
+
+p.site-slogan {
+    font-size: 20px;
+    color: #FFA500;
+    font-style: italic;
+    text-align: center;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 6px #000;
+}
+.planet-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin: 40px auto;
+    max-width: 1200px;
+}
+
+.planet {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+.planet:hover {
+    transform: scale(1.05);
+}
+
+.planet img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 12px #FFD700;
+}
+
+.planet h2 {
+    margin-top: 10px;
+    color: #FFD700;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Orbitron', sans-serif;
+    /*background-image: url('https://i.pinimg.com/736x/00/f1/34/00f134fc9b579035cd9c1cb54c2155f7.jpg');*/
+    background-image: 
+                radial-gradient(circle at 10% 20%, rgba(138, 43, 226, 0.1) 0%, transparent 20%),
+                radial-gradient(circle at 90% 80%, rgba(0, 191, 255, 0.1) 0%, transparent 20%),
+                url('https://images.unsplash.com/photo-1462331940025-496dfbfc7564?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* skrol etdikcə fon sabit qalsın */
+    color: white;
+}
+
+
+</style>
+</head>
+<body>
+    <form action="/planet_search" method="get">
+        <input type="text" name="query" placeholder="Planet adı ilə axtar" />
+        <button type="submit">Axtar</button>
+        <a href="/record" class="record__button">Kayıt</a>
+    </form>
+
+      <li class="card">
+        <a class="card__link" href="/planet/sun">
+          <img class="card__img" src="../static/img/Sun.jpg" width="250" height="250" alt="post_icon">
+          <div class="card__text">
+            <h2 class="card__title">Sun</h2>
+          </div>
+        </a>
+      <li class="card">
+        <a class="card__link" href="/planet/mercury">
+          <img class="card__img" src="../static/img/Mercury.jpg" width="250" height="250" alt="post_icon">
+          <div class="card__text">
+            <h2 class="card__title">Mercury</h2>
+          </div>
+        </a>
+      </li>
+      <li class="card">
+        <a class="card__link" href="/planet/venus">
+          <img class="card__img" src="../static/img/Venus.jpg" width="250" height="250" alt="post_icon">
+          <div class="card__text">
+            <h2 class="card__title">Venus</h2>
+          </div>
+        </a>
+      <li class="card">
+        <a class="card__link" href="/planet/earth">
+          <img class="card__img" src="../static/img/earth.jpg" width="250" height="250" alt="post_icon">
+          <div class="card__text">
+            <h2 class="card__title">Earth</h2>
+          </div>
+        </a>
+      </li>
+      <li class="card">
+        <a class="card__link" href="/planet/moon">
+          <img class="card__img" src="../static/img/moon.jpg" width="250" height="250" alt="post_icon">
+          <div class="card__text">
+            <h2 class="card__title">Moon</h2>
+          </div>
+        </a>
+      </li>
+      <li class="card">
+        <a class="card__link" href="/planet/mars">
+          <img class="card__img" src="../static/img/Mars.jpg" width="250" height="250" alt="post_icon">
+          <div class="card__text">
+            <h2 class="card__title">Mars</h2>
+          </div>
+        </a>
+      </li>
+      <li class="card">
+        <a class="card__link" href="/planet/asteroids">
+          <img class="card__img" src="../static/img/Asteroids.jpg" width="250" height="250" alt="post_icon">
+          <div class="card__text">
+            <h2 class="card__title">Asteroids</h2>
+          </div>
+        </a>
+      </li>
+      <li class="card">
+        <a class="card__link" href="/planet/jupiter">
+          <img class="card__img" src="../static/img/Jupiter.jpg" width="250" height="250" alt="post_icon">
+          <div class="card__text">
+            <h2 class="card__title">Jupiter</h2>
+          </div>
+        </a>
+      </li>
+      <li class="card">
+        <a class="card__link" href="/planet/saturn">
+          <img class="card__img" src="../static/img/Saturn.jpg" width="250" height="250" alt="post_icon">
+          <div class="card__text">
+            <h2 class="card__title">Saturn</h2>
+          </div>
+        </a>
+      </li>
+      <li class="card">
+        <a class="card__link" href="/planet/uranus">
+          <img class="card__img" src="../static/img/Uranus.jpg" width="250" height="250" alt="post_icon">
+          <div class="card__text">
+            <h2 class="card__title">Uranus</h2>
+          </div>
+        </a>
+      </li>
+      <li class="card">
+        <a class="card__link" href="/planet/neptune">
+          <img class="card__img" src="../static/img/Neptune.jpg" width="250" height="250" alt="post_icon">
+          <div class="card__text">
+            <h2 class="card__title">Neptune</h2>
+          </div>
+        </a>
+      </li>
+      <li class="card">
+        <a class="card__link" href="/planet/comets">
+          <img class="card__img" src="../static/img/Comets.jpg" width="250" height="250" alt="post_icon">
+          <div class="card__text">
+            <h2 class="card__title">Comets</h2>
+          </div>
+        </a>
+      </li>
+      <li class="card">
+        <a class="card__link" href="/planet/comunication">
+          <img class="card__img" src="../static/img/free-comunication-vector-illustration.jpg" width="250" height="250" alt="post_icon">
+          <div class="card__text">
+            <h2 class="card__title">Comunication</h2>
+          </div>
+        </a>
+      </li>
+
+
+    <h3>Galery</h3>
+    <ul class="image-list">
+      <li><img src="../static/img/Sun.jpg" alt="Comet 1" width="350" height="350"></li>
+      <li><img src="../static/img/Mercury.jpg" alt="Comet 2" width="350" height="350"></li>
+      <li><img src="../static/img/Venus.jpg" alt="Comet 2" width="350" height="350"></li>
+      <li><img src="../static/img/Earth.jpg" alt="Comet 2" width="350" height="350"></li>
+      <li><img src="../static/img/Moon.jpg" alt="Comet 2" width="350" height="350"></li>
+      <li><img src="../static/img/Mars.jpg" alt="Comet 2" width="350" height="350"></li>
+      <li><img src="../static/img/Asteroids.jpg" alt="Comet 2" width="350" height="350"></li>
+      <li><img src="../static/img/Jupiter.jpg" alt="Comet 2" width="350" height="350"></li>
+      <li><img src="../static/img/Saturn.jpg" alt="Comet 2" width="350" height="350"></li>
+      <li><img src="../static/img/Uranus.jpg" alt="Comet 2" width="350" height="350"></li>
+      <li><img src="../static/img/Neptune.jpg" alt="Comet 2" width="350" height="350"></li>
+      <li><img src="../static/img/Comets.jpg" alt="Comet 2" width="350" height="350"></li>
+      <li><img src="../static/img/Screenshot 2025-04-14 010607.png" alt="Comet 2" width="350" height="350"></li>
+      <li><img src="../static/img/logo2gate.png" alt="Comet 2" width="350" height="350"></li>
+    </ul>
+    
+</body>
+</html>

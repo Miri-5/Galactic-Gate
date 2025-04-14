@@ -1,0 +1,20 @@
+Başlık: Salam
+Alt Başlık: Nec's'n
+Metin: yjjjjjjjjjjj
+İşlem: olustur
+==================================================
+Başlık: Salam
+Alt Başlık: Nec's'n
+Metin: yjjjjjjjjjjj
+İşlem: kaydet
+==================================================
+Başlık: Salam
+Alt Başlık: Nec's'nCASA
+Metin: ASCASC
+İşlem: olustur
+==================================================
+Başlık: Salam
+Alt Başlık: Nec's'n
+Metin: x
+İşlem: olustur
+==================================================

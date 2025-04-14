@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html, body {
+            width: 100%;
+            height: 100%;
+            background: #2A2C2E;
+            font-family: sans-serif;
+        }
+
+        .circles {
+            width: 50px;  /* kiçik ölçü verdik logo kimi */
+            height: 50px;
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            perspective: 1000px;
+            color: #61DAFB;
+            z-index: 1000;
+        }
+
+        .circles span {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            display: block;
+            width: 18.4%;
+            height: 18.4%;
+            border-radius: 100%;
+            background: currentColor;
+        }
+
+        .circles div {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-left: 2px solid;
+            border-top: 2px solid transparent;
+            border-radius: 100%;
+        }
+        button[name="action"][value="kaydet"] {
+  border-color: yellow;
+  color: yellow;
+}
+
+button:hover {
+  background-color: #21262d;
+}
+    </style>
+</head>
+<body>
+    <div class="circles">
+        <div></div>
+        <div></div>
+        <div></div>
+        <span></span>
+    </div>
+</body>
+</html>

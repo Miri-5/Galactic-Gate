@@ -1,0 +1,133 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #0d1b2a;
+    color: white;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1, h2 {
+    color: #ffd700;
+}
+
+form {
+    margin: 20px auto;
+    padding: 10px;
+    background: #1b263b;
+    display: inline-block;
+    border-radius: 8px;
+}
+
+input {
+    padding: 5px;
+    margin: 5px;
+    background: #415a77;
+    color: white;
+    border: none;
+}
+
+button {
+    background: #ff9f1c;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: white;
+    border-radius: 5px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+}
+
+.record__button {
+    border: 1px solid rgb(202, 232, 10);
+    background: #0F172A;
+    border-radius: 10px;
+    color: rgba(14, 165, 233, 1);
+    padding: 10px;
+    font: inherit;
+    width: 100px;
+    height: 25px;
+    cursor: pointer;
+    transition: 0.2s;
+    text-align: center;
+}
+
+.record__button:hover {
+    color: #F8FAFC;
+    background:  rgba(14, 165, 233, 1);
+}
+
+.button {
+    padding: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.search {
+    margin: 20px 0;}
+
+
+/**//**//**/
+
+body {
+    background-color: #0d1117;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: #161b22;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 0 10px #222;
+    width: 400px;
+    text-align: center;
+  }
+  
+  .lightbulb {
+    width: 100px;
+    margin-bottom: 20px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    background-color: #0d1117;
+    border: 1px solid #30363d;
+    border-radius: 8px;
+    color: white;
+  }
+  
+  .buttons {
+    margin-top: 15px;
+  }
+  
+  button {
+    padding: 10px 25px;
+    margin: 5px;
+    border: 1px solid #00bfff;
+    background-color: transparent;
+    color: #00bfff;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  button[name="action"][value="kaydet"] {
+    border-color: yellow;
+    color: yellow;
+  }
+  
+  button:hover {
+    background-color: #21262d;
+  }
+  
